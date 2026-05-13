@@ -101,18 +101,6 @@ nav a.active {
     color: var(--white);
 }
 
-.avatar {
-    width: 45px;
-    height: 45px;
-    background: var(--dark-green);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    border-radius: 50%;
-}
-
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -155,32 +143,6 @@ nav a.active {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--dark-green);
     padding-bottom: 0.5rem;
-}
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.ranking-list li,
-.upcoming-list li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--dark-green);
-    gap: 1rem;
-}
-
-.upcoming-list li {
-    justify-content: space-between;
-}
-
-.ranking-list li:last-child,
-.upcoming-list li:last-child {
-    border: none;
 }
 
 .xp {
