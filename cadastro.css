@@ -122,7 +122,6 @@ textarea {
     font-size: 1rem;
     background: var(--white);
     color: var(--dark-green);
-    cursor: not-allowed;
 }
 
 .btn {

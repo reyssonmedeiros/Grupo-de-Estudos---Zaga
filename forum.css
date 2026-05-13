@@ -223,7 +223,6 @@ nav a.active {
     resize: vertical;
     background: var(--white);
     color: var(--dark-green);
-    cursor: not-allowed;
 }
 
 .reply-actions {
