@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --dark-green: #064E3B;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--white);
+    color: var(--dark-green);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-green);
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--dark-green);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+nav a.active {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+}
+
+.card {
+    background: var(--white);
+    border: 2px solid var(--dark-green);
+    padding: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--dark-green);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.btn.full {
+    width: 100%;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.badge {
+    padding: 4px 10px;
+    border: 1px solid var(--dark-green);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--dark-green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.forum-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+}
+
+.category-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--dark-green);
+    font-weight: 600;
+}
+
+.category-list li:last-child {
+    border: none;
+}
+
+.category-list li.active {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.count {
+    background: var(--white);
+    color: var(--dark-green);
+    padding: 2px 8px;
+    border: 1px solid var(--dark-green);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.category-list li.active .count {
+    border-color: var(--white);
+}
+
+.thread-card {
+    margin-bottom: 2rem;
+}
+
+.thread-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--dark-green);
+    padding-bottom: 1rem;
+}
+
+.thread-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.thread-author strong {
+    display: block;
+}
+
+.thread-author span {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.thread-body h2 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.thread-body p {
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.thread-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--dark-green);
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 700;
+}
+
+.replies-title {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--dark-green);
+    padding-bottom: 0.5rem;
+}
+
+.reply-card {
+    margin-bottom: 1rem;
+}
+
+.reply-card p {
+    font-weight: 600;
+}
+
+.reply-box {
+    margin-top: 2rem;
+}
+
+.reply-box textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--dark-green);
+    font-size: 1rem;
+    resize: vertical;
+    background: var(--white);
+    color: var(--dark-green);
+    cursor: not-allowed;
+}
+
+.reply-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .forum-layout {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galera da Zaga - Fórum</title>
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Galera da Zaga</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="aluno.html">Perfil</a>
+            <a href="grupos.html">Grupos</a>
+            <a href="desafios.html">Desafios</a>
+            <a href="forum.html" class="active">Fórum</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="forum-layout">
+            <aside class="forum-sidebar">
+                <button class="btn btn-primary full mb-2">Novo Tópico</button>
+                <div class="card">
+                    <h3>Categorias</h3>
+                    <ul class="category-list">
+                        <li class="active"><span>Dúvidas Gerais</span> <span class="count">142</span></li>
+                        <li><span>Programação</span> <span class="count">85</span></li>
+                        <li><span>Matemática</span> <span class="count">64</span></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="forum-main">
+                <div class="card thread-card">
+                    <div class="thread-header">
+                        <div class="thread-author">
+                            <div class="avatar">AM</div>
+                            <div>
+                                <strong>Ana Maria</strong>
+                                <span>Postado há 3 horas</span>
+                            </div>
+                        </div>
+                        <span class="badge">Matemática</span>
+                    </div>
+                    <div class="thread-body">
+                        <h2>Dúvida sobre extração de dados estáticos</h2>
+                        <p>Discussão sobre estruturas de planilhas.</p>
+                    </div>
+                    <div class="thread-footer">
+                        <span>3 Respostas</span>
+                    </div>
+                </div>
+
+                <h3 class="replies-title">Respostas</h3>
+                <div class="card reply-card">
+                    <div class="thread-author mb-1">
+                        <div class="avatar">PR</div>
+                        <div>
+                            <strong>Professor Renato</strong>
+                            <span>Há 1 hora</span>
+                        </div>
+                    </div>
+                    <p>Você pode utilizar métodos analíticos convencionais. Resposta puramente visual.</p>
+                </div>
+
+                <div class="card reply-box">
+                    <textarea placeholder="Escreva sua resposta..." rows="4" readonly></textarea>
+                    <div class="reply-actions">
+                        <button class="btn btn-primary">Enviar Comentário</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

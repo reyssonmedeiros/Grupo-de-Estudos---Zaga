@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galera da Zaga - Grupos</title>
+    <link rel="stylesheet" href="grupos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Galera da Zaga</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="aluno.html">Perfil</a>
+            <a href="grupos.html" class="active">Grupos</a>
+            <a href="desafios.html">Desafios</a>
+            <a href="forum.html">Fórum</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="top-bar card">
+            <input type="text" class="search-input" placeholder="Pesquisar grupos de estudo..." readonly>
+            <button class="btn btn-primary">Criar Grupo</button>
+        </div>
+
+        <div class="layout-grid">
+            <section class="groups-grid">
+                <div class="card group-card">
+                    <div class="group-content">
+                        <h3>Nivelamento de Matemática</h3>
+                        <p>Grupo focado na preparação em operações básicas, frações e álgebra.</p>
+                        <div class="tags">
+                            <span class="badge">Matemática</span>
+                        </div>
+                        <div class="group-meta">
+                            <span>45 membros</span>
+                            <span>Alta atividade</span>
+                        </div>
+                        <button class="btn btn-outline full">Ver Grupo</button>
+                    </div>
+                </div>
+
+                <div class="card group-card">
+                    <div class="group-content">
+                        <h3>Devs do Front-End</h3>
+                        <p>Discussões sobre React, TypeScript e criação de interfaces estáticas.</p>
+                        <div class="tags">
+                            <span class="badge">Programação</span>
+                        </div>
+                        <div class="group-meta">
+                            <span>128 membros</span>
+                            <span>Alta atividade</span>
+                        </div>
+                        <button class="btn btn-primary full">Entrar no Grupo</button>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar card">
+                <h3>Grupos em Destaque</h3>
+                <ul class="ranking-list">
+                    <li>
+                        <div class="rank-num">1</div>
+                        <div><strong>Devs do Front-End</strong><br><span>15.200 XP</span></div>
+                    </li>
+                    <li>
+                        <div class="rank-num">2</div>
+                        <div><strong>Nivelamento Mat</strong><br><span>12.400 XP</span></div>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

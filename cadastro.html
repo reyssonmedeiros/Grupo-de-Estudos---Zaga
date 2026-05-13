@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galera da Zaga - Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Galera da Zaga</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html" class="active">Cadastro</a>
+            <a href="aluno.html">Perfil</a>
+            <a href="grupos.html">Grupos</a>
+            <a href="desafios.html">Desafios</a>
+            <a href="forum.html">Fórum</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card form-container">
+            <h2>Cadastrar Novo Aluno</h2>
+            <p class="subtitle">Insira os dados no sistema.</p>
+            
+            <form action="#" class="cadastro-form">
+                <div class="avatar-upload">
+                    <div class="avatar-preview">IMG</div>
+                    <button type="button" class="btn btn-outline">Escolher Foto</button>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Ex: João da Silva" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail Institucional</label>
+                        <input type="email" placeholder="joao@escola.edu.br" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>Data de Nascimento</label>
+                        <input type="date" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>Curso</label>
+                        <select disabled>
+                            <option>Informática</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Turma</label>
+                        <input type="text" placeholder="Ex: INFO-3A" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>Nível Acadêmico</label>
+                        <select disabled>
+                            <option>Técnico</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Áreas de Interesse</label>
+                    <input type="text" placeholder="Ex: Matemática, React" readonly>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Biografia</label>
+                    <textarea rows="3" placeholder="Texto biográfico..." readonly></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline">Limpar</button>
+                    <button type="button" class="btn btn-primary">Cadastrar Aluno</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

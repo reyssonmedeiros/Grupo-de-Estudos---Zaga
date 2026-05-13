@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --dark-green: #064E3B;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--white);
+    color: var(--dark-green);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-green);
+}
+
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--dark-green);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+nav a.active {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: var(--white);
+    border: 2px solid var(--dark-green);
+    padding: 2.5rem;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--dark-green);
+    padding-bottom: 1rem;
+}
+
+.avatar-upload {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.avatar-preview {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--dark-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+    margin-top: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--dark-green);
+    font-size: 1rem;
+    background: var(--white);
+    color: var(--dark-green);
+    cursor: not-allowed;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid var(--dark-green);
+}
+
+.btn-primary {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.btn-outline {
+    background: var(--white);
+    color: var(--dark-green);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid var(--dark-green);
+    padding-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
