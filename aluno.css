@@ -78,9 +78,19 @@ nav a.active {
     text-align: center;
 }
 
+.btn {
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid var(--dark-green);
+    background: var(--white);
+}
+
 .avatar-lg {
     width: 120px;
     height: 120px;
+    border-radius: 50%;
     background: var(--dark-green);
     color: var(--white);
     display: flex;
@@ -88,8 +98,18 @@ nav a.active {
     justify-content: center;
     font-size: 3rem;
     font-weight: 700;
-    margin: 0 auto 1rem auto;
-    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.profile-info{
+    flex: 1;
+}
+.profile-info h2 {
+    margin-bottom: 8px;
+}
+
+.profile-info p {
+    margin: 4px 0;
 }
 
 .role {
