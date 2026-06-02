@@ -27,6 +27,7 @@ body {
 .left-side {
     padding: 2rem;
     border-right: 2px solid var(--dark-green);
+    text-align: center;
 }
 
 .left-content {
@@ -46,15 +47,17 @@ body {
 
 nav {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;    
 }
 
 nav a {
     text-decoration: none;
-    color: var(--dark-green);
+    color: var(--white);
     font-weight: 600;
     padding: 0.5rem 1rem;
     border: 2px solid var(--dark-green);
+    background-color: var(--dark-green);
 }
 
 .image-container {
@@ -76,6 +79,7 @@ nav a {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    background-color: var(--dark-green);
 }
 
 .login-card {
