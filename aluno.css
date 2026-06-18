@@ -1,76 +1,13 @@
-
-:root {
-    --dark-green: #064E3B;
-    --white: #FFFFFF;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
-    background: var(--white);
-    color: var(--dark-green);
-}
-
-a {
-    text-decoration: none;
-    color: var(--dark-green);
-}
-
-ul {
-    list-style: none;
-}
-
-header {
-    background: var(--white);
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--dark-green);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-nav {
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-}
-
-nav a.active {
-    background: var(--dark-green);
-    color: var(--white);
-}
+@import url('base.css');
 
 .container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.card {
-    background: var(--white);
-    border: 2px solid var(--dark-green);
-    padding: 1.5rem;
-}
-.last-activity{
+.last-activity {
     margin-top: 1rem;
 }
 
@@ -85,11 +22,7 @@ nav a.active {
 }
 
 .btn {
-    padding: 0.75rem 1.5rem;
     margin-bottom: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: 2px solid var(--dark-green);
     background: var(--white);
 }
 
@@ -107,9 +40,10 @@ nav a.active {
     margin: 0 auto;
 }
 
-.profile-info{
+.profile-info {
     flex: 1;
 }
+
 .profile-info h2 {
     margin-bottom: 8px;
 }
@@ -157,27 +91,6 @@ nav a.active {
     font-size: 0.8rem;
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat h4 {
-    font-weight: 600;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--dark-green);
-    margin-bottom: 0.5rem;
-}
-
-.stat h2 {
-    font-size: 2.5rem;
-}
-
 .subject-item {
     margin-bottom: 1.5rem;
 }
@@ -196,7 +109,6 @@ nav a.active {
     gap: 1rem;
     padding: 1rem 0;
     border-bottom: 1px solid var(--dark-green);
-    
 }
 
 .activity-feed li:last-child {
@@ -213,12 +125,11 @@ nav a.active {
     font-weight: bold;
 }
 
-
 @media (max-width: 900px) {
     .profile-layout {
         grid-template-columns: 1fr;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr;
     }

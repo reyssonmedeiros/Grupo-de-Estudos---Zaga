@@ -1,65 +1,9 @@
-:root {
-    --dark-green: #064E3B;
-    --white: #FFFFFF;
-}
+@import url('base.css');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
+.btn {
+    padding: 0.8rem 1.2rem;
     background: var(--white);
     color: var(--dark-green);
-}
-
-a {
-    text-decoration: none;
-    color: var(--dark-green);
-}
-
-header {
-    background: var(--white);
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--dark-green);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-nav {
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-}
-
-nav a.active {
-    background: var(--dark-green);
-    color: var(--white);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 5%;
-}
-
-.card {
-    border: 2px solid var(--dark-green);
-    background: var(--white);
-    padding: 1.5rem;
 }
 
 .group-header {
@@ -104,35 +48,12 @@ nav a.active {
     margin-top: 1.5rem;
 }
 
-.btn {
-    padding: 0.8rem 1.2rem;
-    border: 2px solid var(--dark-green);
-    background: var(--white);
-    color: var(--dark-green);
-    font-weight: 600;
-    cursor: pointer;
-}
-
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.stat {
-    text-align: center;
-}
-
 .stat h4 {
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid var(--dark-green);
     padding-bottom: 0.5rem;
-}
-
-.stat h2 {
-    font-size: 2.5rem;
 }
 
 .members-section h2 {
@@ -168,7 +89,6 @@ td {
 }
 
 @media (max-width: 900px) {
-
     .group-info {
         flex-direction: column;
         text-align: center;
@@ -186,5 +106,4 @@ td {
     td {
         padding: 0.7rem;
     }
-
 }

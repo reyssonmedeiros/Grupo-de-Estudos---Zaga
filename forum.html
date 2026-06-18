@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galera da Zaga - Fórum</title>
     <link rel="stylesheet" href="forum.css">
+    <script src="validacoes.js" defer></script>
+    <script src="formularios.js" defer></script>
 </head>
 <body>
     <header>
@@ -63,8 +65,9 @@
                 </div>
 
                 <div class="card reply-box">
-                    <form action=#>
-                        <textarea placeholder="Escreva sua resposta..." rows="4"></textarea>
+                    <form action=# id="formResposta">
+                        <textarea id="comentario" placeholder="Escreva sua resposta..." rows="4"></textarea>
+                        <span id="comentarioErro" class="erro"></span>
                         <div class="reply-actions">
                             <button type="submit" class="btn btn-primary">Enviar Comentário</button>
                         </div>

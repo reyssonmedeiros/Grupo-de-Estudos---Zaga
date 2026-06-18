@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galera da Zaga - Cadastro</title>
     <link rel="stylesheet" href="cadastro.css">
+    <script src="validacoes.js" defer></script>
+    <script src="formularios.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,7 +22,7 @@
             <h2>Cadastre-se</h2>
             <p class="subtitle">Seja Zaga.</p>
             
-            <form action="#" class="cadastro-form">
+            <form action="#" class="cadastro-form" id="formCadastro">
                 <div class="avatar-upload">
                     <div class="avatar-preview">IMG</div>
                     <button type="button" class="btn btn-outline">Escolher Foto</button>
@@ -28,24 +30,30 @@
 
                 <div class="form-grid">
                     <div class="input-group">
-                        <label>Nome Completo</label>
-                        <input type="text" placeholder="Ex: Joaquim Bezerrinha" required>
+                        <label for="nome">Nome Completo</label>
+                        <input id="nome" type="text" placeholder="Ex: Joaquim Bezerrinha" required>
+                        <span id="nomeErro" class="erro"></span>
                     </div>
                     <div class="input-group">
-                        <label>E-mail Institucional</label>
-                        <input type="email" placeholder="joaquim@gmai.com" required>
+                        <label for="email">E-mail Institucional</label>
+                        <input id="email" type="email" placeholder="joaquim@gmai.com" required>
+                        <span id="emailErro" class="erro"></span>
                     </div>
                     <div class="input-group">
-                        <label>Data de Nascimento</label>
-                        <input type="date" required>
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input id="dataNascimento" type="date" required>
+                        <span id="dataNascimentoErro" class="erro"></span>
                     </div>
                     <div class="input-group">
-                        <label for="password">Senha:</label>
-                        <input type="password" placeholder="Digite sua senha:" required>
+                        <label for="senha">Senha:</label>
+                        <input id="senha" type="password" placeholder="Digite sua senha:" required>
+                        <span id="senhaSugestao" class="erro"></span>
                     </div>
+                </div>
+
                 <div class="input-group full-width">
-                    <label>Um pouco sobre você</label>
-                    <textarea rows="3" placeholder="Texto descritivo..." ></textarea>
+                    <label for="bio">Um pouco sobre você</label>
+                    <textarea id="bio" rows="3" placeholder="Texto descritivo..."></textarea>
                 </div>
 
                 <div class="form-actions">

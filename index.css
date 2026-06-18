@@ -1,87 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-:root {
-    --dark-green: #064E3B;
-    --white: #FFFFFF;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+@import url('base.css');
 
 body {
-    background: var(--white);
-    color: var(--dark-green);
     padding-bottom: 2rem;
 }
 
-a {
-    text-decoration: none;
-    color: var(--dark-green);
-}
-
-ul {
-    list-style: none;
-}
-
-header {
-    background: var(--white);
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--dark-green);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--dark-green);
-    text-transform: uppercase;
-}
-
-nav {
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
-}
-
-nav a.active {
-    background: var(--dark-green);
-    color: var(--white);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 5%;
-}
-
 .card {
-    background: var(--white);
-    border: 2px solid var(--dark-green);
     padding: 2rem;
 }
 
 .btn {
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--dark-green);
-    cursor: pointer;
-    font-weight: 600;
     display: inline-block;
-}
-
-.btn-primary {
-    background: var(--dark-green);
-    color: var(--white);
 }
 
 .section-title {
@@ -90,15 +18,6 @@ nav a.active {
     text-transform: uppercase;
     border-bottom: 2px solid var(--dark-green);
     padding-bottom: 0.5rem;
-}
-
-.badge {
-    padding: 4px 10px;
-    border: 1px solid var(--dark-green);
-    font-size: 0.8rem;
-    font-weight: 600;
-    background: var(--dark-green);
-    color: var(--white);
 }
 
 .hero {
@@ -150,14 +69,12 @@ nav a.active {
     font-weight: 700;
 }
 
-
-
 @media (max-width: 768px) {
     .hero,
     .grid-2 {
         grid-template-columns: 1fr;
     }
-    
+
     nav {
         display: none;
     }

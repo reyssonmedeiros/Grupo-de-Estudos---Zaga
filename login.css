@@ -1,19 +1,6 @@
-
-:root {
-    --dark-green: #064E3B;
-    --white: #FFFFFF;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+@import url('base.css');
 
 body {
-    background: var(--white);
-    color: var(--dark-green);
     min-height: 100vh;
 }
 
@@ -22,7 +9,6 @@ body {
     grid-template-columns: 55% 45%;
     min-height: 100vh;
 }
-
 
 .left-side {
     padding: 2rem;
@@ -46,16 +32,12 @@ body {
 }
 
 nav {
-    display: flex;
     justify-content: center;
-    gap: 2rem;    
+    gap: 2rem;
 }
 
 nav a {
-    text-decoration: none;
     color: var(--white);
-    font-weight: 600;
-    padding: 0.5rem 1rem;
     border: 2px solid var(--dark-green);
     background-color: var(--dark-green);
 }
@@ -72,7 +54,6 @@ nav a {
     object-fit: cover;
     display: block;
 }
-
 
 .right-side {
     display: flex;
@@ -145,9 +126,7 @@ nav a {
     opacity: 0.9;
 }
 
-
 @media (max-width: 900px) {
-
     .login-page {
         grid-template-columns: 1fr;
     }

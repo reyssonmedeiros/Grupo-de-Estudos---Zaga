@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galera da Zaga - Login</title>
     <link rel="stylesheet" href="login.css">
+    <script src="validacoes.js" defer></script>
+    <script src="formularios.js" defer></script>
 </head>
 <body>
 
@@ -43,16 +45,18 @@
                     Acesse sua conta para continuar.
                 </p>
 
-                <form action="aluno.html">
+                <form action="aluno.html" id="formLogin">
 
                     <div class="input-group">
-                        <label>E-mail</label>
-                        <input type="email">
+                        <label for="loginEmail">E-mail</label>
+                        <input id="loginEmail" type="email">
+                        <span id="loginEmailErro" class="erro"></span>
                     </div>
 
                     <div class="input-group">
-                        <label>Senha</label>
-                        <input type="password">
+                        <label for="loginSenha">Senha</label>
+                        <input id="loginSenha" type="password">
+                        <span id="loginSenhaErro" class="erro"></span>
                     </div>
 
                     <button class="btn-login">
