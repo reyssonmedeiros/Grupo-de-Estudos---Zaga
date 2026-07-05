@@ -1,81 +1,802 @@
 @import url('base.css');
 
-body {
-    padding-bottom: 2rem;
+.section-sub {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    color: #3a7a62;
+    font-size: 1rem;
 }
 
-.card {
-    padding: 2rem;
-}
 
-.btn {
-    display: inline-block;
-}
 
-.section-title {
-    margin: 3rem 0 1.5rem 0;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--dark-green);
-    padding-bottom: 0.5rem;
-}
 
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
+.hero-story {
     background: var(--dark-green);
+    color: var(--white);
+    padding: 5rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-story__bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(6rem, 20vw, 16rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: 0.2em;
+}
+
+.hero-story__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-story__eyebrow {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+    margin-bottom: 1.5rem;
+}
+
+.hero-story__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+}
+
+.hero-story__title--accent {
+    display: inline-block;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 4px;
+}
+
+.hero-story__sub {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+.hero-story__cta {
+    margin-top: 1rem;
+    background: var(--white);
+    color: var(--dark-green);
+    border-color: var(--white);
+    font-size: 1rem;
+    padding: 0.9rem 2.2rem;
+}
+
+.hero-story__cta:hover {
+    background: transparent;
     color: var(--white);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+
+
+.avatars-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
 }
 
-.hero .btn-primary {
+.avatar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.avatar-frame {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.avatar-frame:hover {
+    transform: translateY(-6px) scale(1.05);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.avatar-frame--you {
+    background: transparent;
+    border: 2px dashed rgba(255, 255, 255, 0.35);
+    animation: pulse-border 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+    0%, 100% { border-color: rgba(255,255,255,0.35); }
+    50%       { border-color: rgba(255,255,255,0.7); }
+}
+
+.avatar-item--you .avatar-frame--you:hover {
+    transform: translateY(-6px) scale(1.05);
+    border-color: var(--white);
+}
+
+.avatar-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--white);
+}
+
+.avatar-role {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    color: var(--white);
+}
+
+.chars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.char-flip {
+    perspective: 1000px;
+    height: 340px;
+}
+
+.char-flip__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.char-flip:hover .char-flip__inner {
+    transform: rotateY(180deg);
+}
+
+.char-flip__front,
+.char-flip__back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 2px solid var(--dark-green);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.char-flip__back {
+    transform: rotateY(180deg);
+    background: var(--dark-green);
+    color: var(--white);
+    justify-content: center;
+}
+
+.char-flip__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 2px solid var(--dark-green);
+}
+
+.char-flip__avatar svg {
+    width: 100%;
+    height: 100%;
+}
+
+.char-flip__front h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--dark-green);
+}
+
+.char-flip__role {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #3a7a62;
+    margin-bottom: auto;
+}
+
+.char-flip__hint {
+    font-size: 0.72rem;
+    color: #aaa;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.char-flip__quote {
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    border-left: 3px solid rgba(255,255,255,0.3);
+    padding-left: 0.75rem;
+    text-align: left;
+}
+
+.char-flip__stats {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.char-flip__stats li {
+    font-size: 0.82rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    opacity: 0.85;
+}
+
+.char-flip__stats li:last-child {
+    border-bottom: none;
+}
+
+.char-flip__stats strong {
+    color: var(--white);
+}
+
+.char-flip__story {
+    font-size: 0.8rem;
+    opacity: 0.65;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+
+
+.timeline {
+    position: relative;
+    padding: 1rem 0 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Linha vertical central */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: var(--dark-green);
+}
+
+.timeline__item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc(50% + 2.5rem);
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.timeline__item--right {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: calc(50% + 2.5rem);
+}
+
+/* Marcador numerado */
+.timeline__marker {
+    position: absolute;
+    left: 50%;
+    top: 1.2rem;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--dark-green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 3px solid var(--white);
+    z-index: 1;
+}
+
+.timeline__marker--you {
+    background: var(--white);
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+    animation: pulse-marker 2s ease-in-out infinite;
+}
+
+@keyframes pulse-marker {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(6,78,59,0.3); }
+    50%       { box-shadow: 0 0 0 8px rgba(6,78,59,0); }
+}
+
+.timeline__content {
+    max-width: 380px;
+    padding: 1.5rem;
+}
+
+.timeline__tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #3a7a62;
+    margin-bottom: 0.5rem;
+}
+
+.timeline__content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline__content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #2a5a48;
+}
+
+/* Card especial do "Você" */
+.timeline__content--you {
+    border-width: 2px;
+    border-style: dashed;
+}
+
+.timeline__btn {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+
+.cta-final {
+    background: var(--dark-green);
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-final__eyebrow {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    opacity: 0.45;
+    margin-bottom: 1.5rem;
+}
+
+.cta-final__quote {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+    border: none;
+    font-style: normal;
+}
+
+.cta-final__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.cta-final .btn-primary {
     background: var(--white);
     color: var(--dark-green);
     border-color: var(--white);
 }
 
-.hero-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+.cta-final .btn-primary:hover {
+    background: transparent;
+    color: var(--white);
 }
 
-.stat-box {
-    border: 1px solid var(--white);
-    padding: 1.5rem;
-    text-align: center;
+.cta-final .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,0.4);
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+.cta-final .btn-outline:hover {
+    border-color: var(--white);
 }
 
-.feature-card h3 {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--dark-green);
-    padding-bottom: 0.5rem;
+.cta-final__stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.xp {
-    margin-left: auto;
-    font-weight: 700;
+.cta-final__stats .stat-box {
+    border-color: rgba(255,255,255,0.2);
+    padding: 1rem 2rem;
+    min-width: 120px;
+}
+
+.cta-final__stats .stat-box h3 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.cta-final__stats .stat-box span {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+@media (max-width: 1024px) {
+    .chars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .char-flip {
+        height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero,
-    .grid-2 {
+    .hero-story {
+        padding: 3rem 0 2.5rem;
+    }
+    .avatar-frame {
+        width: 70px;
+        height: 70px;
+    }
+    .avatars-row {
+        gap: 0.75rem;
+    }
+    .chars-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    /* Timeline vira coluna única */
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline__item,
+    .timeline__item--right {
+        justify-content: flex-start;
+        padding-left: 4rem;
+        padding-right: 0;
+    }
+    .timeline__marker {
+        left: 20px;
+    }
+    .timeline__content {
+        max-width: 100%;
+    }
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .chars-grid {
         grid-template-columns: 1fr;
     }
+    .char-flip {
+        height: 280px;
+    }
+}
+/* =============================================
+   SPLASH SCREEN
+   Duração total das fases:
+     0.0s–1.5s  → logo aparece
+     1.8s–3.5s  → frase é digitada
+     3.8s–6.5s  → personagens entram (0.7s cada)
+     7.0s–8.0s  → splash some (fade out)
+     8.0s+      → display:none, página normal
+============================================= */
 
-    nav {
+/* Impede scroll enquanto splash está ativo */
+body {
+    overflow: hidden;
+    animation: body-unlock 0s 8s forwards;
+}
+@keyframes body-unlock {
+    to { overflow: auto; }
+}
+
+/* Container principal */
+.splash {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #064E3B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* some em 7s, desaparece em 8s */
+    animation: splash-hide 1s 7s forwards;
+    pointer-events: none;
+}
+@keyframes splash-hide {
+    0%   { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; display: none; }
+}
+
+/* ── Fase 1: Logo ─────────────────────────── */
+.splash__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    opacity: 0;
+    animation: fade-up 0.8s 0.3s forwards;
+}
+.splash__logo-top {
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: rgba(255,255,255,0.45);
+}
+.splash__logo-main {
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.15em;
+    line-height: 1;
+}
+
+/* ── Fase 2: Texto digitado ───────────────── */
+.splash__type-wrap {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    opacity: 0;
+    /* aparece depois do logo */
+    animation: fade-in 0.4s 1.8s forwards;
+    min-height: 2.2rem;
+}
+
+/* "Seja Zaga" tem 9 caracteres + espaço = 9
+   Cada caractere leva ~0.12s
+   Total de digitação: ~1.1s (de 1.8s a 2.9s) */
+.splash__typed {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.05em;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    /* efeito máquina de escrever:
+       largura vai de 0 até o conteúdo completo */
+    width: 0;
+    animation: typing 1.1s steps(9, end) 2s forwards;
+}
+@keyframes typing {
+    from { width: 0; }
+    to   { width: 6.5ch; }
+}
+
+/* cursor piscante */
+.splash__cursor {
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.6);
+    animation:
+        fade-in  0.1s 1.9s forwards,
+        blink    0.7s 2s  step-end infinite;
+    opacity: 0;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ── Fase 3: Personagens ──────────────────── */
+.splash__chars {
+    display: flex;
+    gap: clamp(1rem, 4vw, 3rem);
+    align-items: flex-end;
+    margin-top: 0.5rem;
+}
+
+.splash__char {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* cada personagem entra com delay escalonado */
+.splash__char--1 { animation: char-enter 0.6s 3.5s forwards; }
+.splash__char--2 { animation: char-enter 0.6s 4.2s forwards; }
+.splash__char--3 { animation: char-enter 0.6s 4.9s forwards; }
+.splash__char--4 { animation: char-enter 0.6s 5.6s forwards; }
+
+@keyframes char-enter {
+    0%   { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.splash__char-avatar {
+    width: clamp(60px, 10vw, 90px);
+    height: clamp(60px, 10vw, 90px);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+.splash__char-avatar svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.splash__char-name {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+.splash__char-role {
+    font-size: clamp(0.6rem, 1.5vw, 0.72rem);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+}
+
+/* ── Linha final antes de sumir ───────────── */
+.splash__end-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.15);
+    /* barra que avança da esquerda para a direita
+       como um "carregando", de 0s a 7s */
+    animation: progress-bar 7s linear forwards;
+    width: 0;
+}
+@keyframes progress-bar {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+
+/* ── Utilitários de animação ──────────────── */
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+/* =============================================
+   CORREÇÕES DE SOBREPOSIÇÃO DE TEXTO
+============================================= */
+
+/* Hero: garante que nada vaze para fora */
+.hero-story {
+    overflow: hidden;
+}
+.hero-story__inner {
+    position: relative;
+    z-index: 1;
+    padding: 0 5%;
+}
+/* Texto de fundo não interfere com o conteúdo */
+.hero-story__bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    /* opacity bem baixa para não brigar com textos */
+    opacity: 1;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+}
+
+/* Avatares: largura controlada para não vazar em telas menores */
+.avatars-row {
+    flex-wrap: wrap;
+    row-gap: 1.2rem;
+}
+.avatar-item {
+    min-width: 0;
+    flex-shrink: 0;
+}
+
+/* Flip cards: garante que frente e verso não apareçam juntos */
+.char-flip {
+    cursor: pointer;
+}
+.char-flip__front,
+.char-flip__back {
+    /* força o texto a nunca vazar do card */
+    overflow: hidden;
+    word-break: break-word;
+}
+.char-flip__front h3,
+.char-flip__back {
+    /* garante que o texto não ultrapasse a borda */
+    max-width: 100%;
+}
+/* Espaço explícito dentro dos cards */
+.char-flip__front {
+    gap: 0.5rem;
+    padding: 1.5rem 1.2rem;
+}
+.char-flip__back {
+    padding: 1.5rem 1.2rem;
+    gap: 0.75rem;
+    overflow-y: auto;
+}
+
+/* Timeline: texto não invade o marcador */
+.timeline__content {
+    /* evita que a caixa encolha demais em telas médias */
+    min-width: 0;
+    word-break: break-word;
+}
+.timeline__content h3 {
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+/* Garante que o marcador fique sempre centrado na linha */
+.timeline__marker {
+    flex-shrink: 0;
+}
+
+/* Section title: não cola no conteúdo acima */
+.section-title {
+    margin-top: 4rem;
+}
+
+/* Textos de seção: line-height adequado */
+.char-flip__story,
+.timeline__content p {
+    line-height: 1.75;
+    font-size: 0.88rem;
+}
+
+/* CTA final: quote não estoura em mobile */
+.cta-final__quote {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: break-word;
+}
+
+/* ── Responsive: splash em mobile ───────── */
+@media (max-width: 600px) {
+    .splash__chars {
+        gap: 0.75rem;
+    }
+    .splash__logo-main {
+        letter-spacing: 0.08em;
+    }
+    .splash__char-role {
         display: none;
     }
 }
