@@ -6,6 +6,13 @@
     color: var(--dark-green);
 }
 
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+    color: var(--dark-green);
+}
+
 .group-header {
     margin-bottom: 2rem;
 }

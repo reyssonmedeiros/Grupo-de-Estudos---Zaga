@@ -13,13 +13,13 @@
 }
 
 body {
-    background: var(--white);
-    color: var(--dark-green);
+    background: var(--dark-green);
+    color: var(--white);
 }
 
 a {
     text-decoration: none;
-    color: var(--dark-green);
+    color: var(--white);
 }
 
 ul {
@@ -27,12 +27,12 @@ ul {
 }
 
 header {
-    background: var(--white);
+    background: var(--dark-green);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--dark-green);
+    border-bottom: 2px solid var(--white);
 }
 
 .logo {
@@ -52,8 +52,8 @@ nav a {
 }
 
 nav a.active {
-    background: var(--dark-green);
-    color: var(--white);
+    background: var(--white);
+    color: var(--dark-green);
 }
 
 .container {

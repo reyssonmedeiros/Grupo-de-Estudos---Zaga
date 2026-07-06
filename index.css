@@ -1,12 +1,36 @@
 @import url('base.css');
 
+
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--dark-green);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-green);
+}
+
+body {
+    background: var(--white);
+    color: var(--dark-green);
+}
+
+nav a.active {
+    background: var(--dark-green);
+    color: var(--white);
+}
+
 .section-sub {
     margin-top: -1rem;
     margin-bottom: 2rem;
     color: #3a7a62;
     font-size: 1rem;
 }
-
 
 
 
@@ -499,17 +523,7 @@
         height: 280px;
     }
 }
-/* =============================================
-   SPLASH SCREEN
-   Duração total das fases:
-     0.0s–1.5s  → logo aparece
-     1.8s–3.5s  → frase é digitada
-     3.8s–6.5s  → personagens entram (0.7s cada)
-     7.0s–8.0s  → splash some (fade out)
-     8.0s+      → display:none, página normal
-============================================= */
 
-/* Impede scroll enquanto splash está ativo */
 body {
     overflow: hidden;
     animation: body-unlock 0s 8s forwards;

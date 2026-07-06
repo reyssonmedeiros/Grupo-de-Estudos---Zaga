@@ -5,10 +5,15 @@
     margin-top: 1.5rem;
 }
 
+.container{
+    color: var(--dark-green);
+}
+
 .header-section {
     margin-bottom: 2rem;
     text-align: center;
-    border-bottom: 2px solid var(--dark-green);
+    border-bottom: 2px solid var(--white);
+    color: var(--white);
     padding-bottom: 1rem;
     text-transform: uppercase;
 }

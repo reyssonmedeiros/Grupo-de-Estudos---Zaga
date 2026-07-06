@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    color: var(--dark-green);
 }
 
 .last-activity {
@@ -72,6 +73,7 @@
     text-align: left;
     border-bottom: 2px solid var(--dark-green);
     padding-bottom: 0.5rem;
+    color: var(--dark-green);
 }
 
 .medals-grid {

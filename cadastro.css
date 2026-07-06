@@ -13,12 +13,14 @@
 h2 {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
+    color: var(--dark-green);
 }
 
 .subtitle {
     margin-bottom: 2rem;
     border-bottom: 2px solid var(--dark-green);
     padding-bottom: 1rem;
+    color: var(--dark-green);
 }
 
 .avatar-upload {
@@ -32,6 +34,7 @@ h2 {
     width: 80px;
     height: 80px;
     border: 2px solid var(--dark-green);
+    color: var(--dark-green);
     display: flex;
     align-items: center;
     justify-content: center;
