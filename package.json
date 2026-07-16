@@ -1,0 +1,25 @@
+{
+  "name": "grupo-de-estudos---zaga",
+  "version": "1.0.0",
+  "description": "\"# Grupo-de-Estudos---Zaga\"",
+  "main": "formularios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyssonmedeiros/Grupo-de-Estudos---Zaga.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/reyssonmedeiros/Grupo-de-Estudos---Zaga/issues"
+  },
+  "homepage": "https://github.com/reyssonmedeiros/Grupo-de-Estudos---Zaga#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "mysql2": "^3.23.0"
+  }
+}
